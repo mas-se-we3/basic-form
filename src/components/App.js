@@ -16,11 +16,11 @@ class App extends Component {
 				<h1>Form</h1>
 				<label className="form-label">
 					First Name
-					<input />
+					<input value={this.state.firstName} />
 				</label>
 				<label className="form-label">
 					Last Name
-					<input />
+					<input value={this.state.lastName} />
 				</label>
 				<div>
 					{this.state.firstName.toUpperCase()}{' '}
