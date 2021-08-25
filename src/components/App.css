@@ -1,0 +1,7 @@
+.form-label {
+	display: block;
+}
+
+.form-label input {
+	margin-left: 20px;
+}
