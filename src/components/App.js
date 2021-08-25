@@ -16,11 +16,11 @@ class App extends Component {
 				<h1>Form</h1>
 				<label className="form-label">
 					First Name
-					<input value={this.state.firstName} />
+					<input value={this.state.firstName} onChange={this.updateFirstName} />
 				</label>
 				<label className="form-label">
 					Last Name
-					<input value={this.state.lastName} />
+					<input value={this.state.lastName} onChange={this.updateLastName} />
 				</label>
 				<div>
 					{this.state.firstName.toUpperCase()}{' '}
@@ -28,6 +28,16 @@ class App extends Component {
 				</div>
 			</div>
 		)
+	}
+
+	updateFirstName = event => {
+		const value = event.target.value
+		this.setState({ firstName: value })
+	}
+
+	updateLastName = event => {
+		const value = event.target.value
+		this.setState({ lastName: value })
 	}
 }
 
